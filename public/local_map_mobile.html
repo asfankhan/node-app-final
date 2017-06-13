@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>NightLyife-Map</title>
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+  	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUE9SXHayTCBZhEYl0fB1L-RfYK-Iit9w&libraries=places"></script>
+
+	<link rel="stylesheet" href="css/index.css">
+	<script src="/js/facebook.js"></script>
+	<script src="/js/chat.js"></script>
+	<script src="/js/map.js"></script>
+
+</head>
+<body class=" row">
+
+	<div class="map-container">
+		<div id='map' class=""></div>
+	</div>
+
+	<div class="select-container">
+	<div class="row">
+		<button class="col-4 btn" onclick="findPlace('bar',50000);">Bars</button>
+		<button class="col-4 btn" onclick="findPlace('restaurant',50000);">Resturants</button>
+		<button class="col-4 btn" onclick="findPlace('night_club',50000);">Night Clubs</button>
+
+	</div>
+	</div>
+
+	<div class="tab-container row" style="background-color: #404040;">
+
+	</div>
+
+<script type="text/javascript">
+
+	getLoc();
+	initMap();
+	setMap();
+
+
+</script>
+</body>
+</html>

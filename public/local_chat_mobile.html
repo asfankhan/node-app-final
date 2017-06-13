@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NightLyife-Chat</title>
+
+	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+
+
+	<link rel="stylesheet" href="css/index.css">
+	<script src="/js/facebook.js"></script>
+	<script src="/js/chat.js"></script>
+
+</head>
+<body id="g">
+	<div class="container-fluid" >
+	<div class="row" style="background:#444444">
+
+		<div class="col-2" style="height: 30px;background-color: #606060">
+			<b>back</b>
+		</div>
+
+		<div class="col-6" style="height: 30px;">
+			
+		</div>
+
+		<div class="col-1 text-center" style="min-height:30px;">
+			<img id='profile' style="min-height: 30px;border-radius:50%; min-width: 30px;height: 5vh; width: 5vh; " src="/img/test_logo_1.png" >
+		</div>
+
+		<div id='name' class="col-3" style="min-height:30px;color:white;font-weight:bold;
+		"></div>
+
+
+	</div>
+	<div class="row" >
+
+		<div id='local_chat_area' class="col-12 scrollbar"  style="display:block; overflow:auto; height: 80vh"></div>
+
+		<div class="input-group">
+			<input id='local_chat_text' type="text" class="form-control" placeholder="Username">
+			<button  onclick="send_message(facebook_user,$('#local_chat_text').val())" class="input-group-addon" >submit</button> 
+		</div>
+
+	</div>
+	</div>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			loadinfo();
+			getarray();
+
+		});
+	</script>
+</body>
+</html>

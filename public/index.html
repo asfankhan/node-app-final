@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+
+  <title> NightLyife</title>
+  
+  
+  	<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+	
+	<link rel="stylesheet" href="css/index.css">
+	<script src="/js/facebook.js"></script>
+
+  
+</head>
+
+<body class="scrollbar" id="style-3">
+
+	<div class="image-container">
+		<img src="img/background1.jpg" alt="" />
+	</div>
+	
+	<div class="container-fluid"  style="position: relative; ">
+	<div class="row">
+
+		<div class="col-8" style="height:5vh;min-height:25px;"></div>
+		
+		<div class="col-1 text-center" style="height:5vh;min-height:25px;">
+			<img id='profile' style="min-height: 30px;border-radius:50%; min-width: 30px;height: 5vh; width: 5vh; " src="/img/test_logo_1.png" >
+		</div>
+
+		<div id='name' class="col-3" style="height:5vh;min-height:25px;color:white;font-weight:bold;
+		"></div>
+
+		<div class="col-12 text-center" style="height:15vh; min-height:75px;color: white; font-size:3em;letter-spacing: 7px;"><b>NightLyfe</b><small style="font-size:.33em;letter-spacing: 1px;">beta</small></div>
+		
+		<div class="col-12 text-center" style="height: 30vh; min-height:150px;">
+			<img  style="max-height: 150px; max-width: 150px;height: 100%; width: 100%; " src="/img/test_logo_2.png" >
+		</div>
+		<div class="col-12" style="height:5vh"></div>
+
+	    <button id="login" onclick="login()" class="button col-8 offset-2" style="height: 7.5vh; min-height:50px; "><b>Login with Facebook</b></button>
+	    <button id="logout" onclick="logout()" class="button col-8 offset-2 " style="height: 7.5vh; min-height:50px; display:none;"><b>Logout</b></button>
+		<div class="col-12" style="height: 2.5vh; min-height:10px; "></div>
+
+	    <button id="" onclick="location.href='/local_chat_mobile.html'" class="button col-8 offset-2 " style="height: 7.5vh; min-height:50px;"><b>Local Chat</b></button>
+		<div class="col-12" style="height: 2.5vh; min-height:10px; "></div>
+		
+	    <button id="" onclick="location.href='/local_map_mobile.html'" class="button col-8 offset-2 " style="height: 7.5vh; min-height:50px;"><b>Local View</b></button>
+		<div class="col-12" style="height: 2.5vh; min-height:10px; "></div>
+
+	</div>
+	</div>
+	
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+
+	<script >
+	$(document).ready(function(){
+	for(var i = 0; i< 12; i++)
+	$(".image-container").append("<span></span>");
+	
+	$('.image-container span').each(function(i){
+		var $item = $(this); 
+		var $randomNumber = Math.random() * 800;
+		
+		function loop(){
+			$item.animate({
+				'opacity' : 0.99 * Math.random()
+			}, 2000, loop);
+		}
+		setTimeout(function(){
+			loop();
+		}, $randomNumber);
+	});
+	});
+	</script>
+
+</body>
+</html>
